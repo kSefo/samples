@@ -1,0 +1,19 @@
+@startuml decorator_pattern
+top to bottom direction
+title decoratorパターン
+Component <|-- ConcreteComponent
+Component <|-- Decorator
+Component <-- Decorator
+Decorator <|-- ConcreteDecoratorA
+Decorator <|-- ConcreteDecoratorB
+@enduml
+
+@startuml input_stream
+top to bottom direction
+title 機能拡張されたファイル読み込み（java.ioパッケージ）
+InputStream <|-- FileInputStream
+InputStream <|-- FilterInputStream
+InputStream <-- FilterInputStream
+FilterInputStream <|-- LineNumberInputStream
+FilterInputStream <|-- BufferedInputStream
+@enduml

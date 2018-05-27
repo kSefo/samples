@@ -1,0 +1,8 @@
+@startuml sequence
+autonumber 
+client -> "dir:Directory" : <<create>>
+client -> "file1 : File" : <<create>>File("a.txt")
+client -> "dir:Directory" : add(file1)
+client -> "file2 : File" : <<create>>File("b.txt")
+client -> "dir:Directory" : add(file2)
+@enduml

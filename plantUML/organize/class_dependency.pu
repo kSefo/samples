@@ -1,0 +1,8 @@
+@startuml class_dependency
+top to bottom direction
+title 依存関係の方向を表現するUMLのクラス図とパッケージ図の矢印
+クラスA ..> クラスB : 依存
+クラスC --> クラスD : 関連
+サブクラス --|> スーパークラス : 継承
+実現クラス ..|> インターフェイス : 実現
+@enduml

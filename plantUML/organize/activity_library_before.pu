@@ -1,0 +1,18 @@
+@startuml activity_library_before
+|利用者|
+start
+repeat
+  |利用者|
+  :好きな作家の本を探す;
+  |図書館員|
+  :蔵書の場所を教える;
+  |利用者|
+  :立ち読みする;
+repeat while (面白いかどうか) is (面白くない)
+-> 面白い;
+|図書館員|
+:貸出手続きをする;
+|利用者|
+:本を受け取る;
+end
+@enduml

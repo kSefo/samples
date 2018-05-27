@@ -1,0 +1,45 @@
+@startuml class_library
+top to bottom direction
+title 図書館システムの概念モデル
+entity 利用者 {
+   氏名 : String
+   生年月日 : date
+   性別 : String
+   住所 : String
+   電話番号 : String
+}
+entity 予約 {
+   予約日 : date
+}
+entity 貸出 {
+   貸出日 : date
+}
+entity 貸出明細 {
+   返却日 : date
+}
+entity 図書 {
+   図書番号 : String
+}
+entity 出版社 {
+   社名 : String
+}
+entity 著者 {
+   氏名 : String
+}
+entity 図書タイトル {
+   書名 : String
+   ISBN : String
+}
+entity 図書ジャンル {
+   名称 : String
+}
+利用者 "1" -- "*" 予約
+利用者 "1" -- "*" 貸出
+貸出 "1" o-- "*" 貸出明細
+貸出明細 "*" -- "1" 図書
+図書 "*" -- "1" 図書タイトル
+図書タイトル "*" -- "1" 出版社
+図書タイトル "*" -- "*" 著者
+図書タイトル "*" -- "1" 図書ジャンル : 分類する
+図書タイトル "1" -- "*" 予約
+@enduml

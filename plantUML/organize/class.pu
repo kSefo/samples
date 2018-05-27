@@ -1,0 +1,20 @@
+@startuml class
+top to bottom direction
+title クラスと関連の表現
+class 書籍 {
+   タイトル : String
+   ISBN : String
+   定価 : Decimal
+}
+class 外国書 {
+   値引価格 : Decimal
+}
+class 著者 {
+   名前 : String
+}
+書籍 <|-- 和書
+書籍 <|-- 外国書
+書籍 <|-- 翻訳書
+書籍 "*" -- "*" 著者 : 執筆する
+著者 "*" -- "*" 翻訳書 : 翻訳する
+@enduml

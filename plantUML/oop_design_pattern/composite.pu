@@ -1,0 +1,15 @@
+@startuml composite_pattern
+top to bottom direction
+title Compositeパターン
+Component <|-- Leaf
+Component <|-- Composite
+Component "*" <-- Composite
+@enduml
+
+@startuml gui_component
+top to bottom direction
+title GUI部品（java.awtパッケージ）
+Component <|-- Button
+Component <|-- Label
+Component "*" <-- Container
+@enduml

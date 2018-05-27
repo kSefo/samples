@@ -1,0 +1,9 @@
+@startuml class
+top to bottom direction
+title class図の例
+Node <|-- File
+Node <|-- Directory
+Node "*" <-- Directory
+Node "1" <-- ShortCut
+File <|-- ShortCut
+@enduml

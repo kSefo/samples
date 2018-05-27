@@ -1,0 +1,18 @@
+@startuml strategy_pattern
+top to bottom direction
+title Strategyパターン
+Context --> Strategy
+Strategy <|-- ConcreteStrategyA
+Strategy <|-- ConcreteStrategyB
+Strategy <|-- ConcreteStrategyC
+@enduml
+
+@startuml display_layout_control
+top to bottom direction
+title 画面レイアウト制御（java.awtパッケージ）
+Container --> LayoutManager
+LayoutManager <|.. FlowLayout
+LayoutManager <|.. BorderLayout
+LayoutManager <|.. GridLayout
+LayoutManager <|.. GridBagLayout
+@enduml
